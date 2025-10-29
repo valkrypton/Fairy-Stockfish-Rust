@@ -476,7 +476,7 @@ mod tests {
         .map(|s| s.to_string())
         .collect();
         let mut pos = startingPosition(&"5check".to_string(), false);
-        pos = pos.makeMoves(&moves);
+        pos = pos.makeMoves(&moves).unwrap();
         assert!(pos.getLegalMoves().len() > 0);
     }
 
