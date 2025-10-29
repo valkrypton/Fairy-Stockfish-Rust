@@ -325,7 +325,7 @@ pub mod ffi {
             fen: &String,
             isChess960: bool,
         ) -> UniquePtr<Position>;
-        fn makeMoves(self: &Position, moves: &Vec<String>) -> UniquePtr<Position>;
+        fn makeMoves(self: &Position, moves: &Vec<String>) -> Result<UniquePtr<Position>>;
 
         /// # Examples
         /// ```
